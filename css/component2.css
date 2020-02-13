@@ -25,7 +25,7 @@
 body {
     font-family: 'Ubuntu', sans-serif;
 }
-p {
+p,ul {
     font-family: 'Lato', sans-serif;
 }
 /*-------------------------*/
@@ -808,6 +808,7 @@ p {
 .work-addbottom{
     padding-bottom: 40px;
 }
+
 /*-------------------------*/
 /* $Contact
 ---------------------------*/

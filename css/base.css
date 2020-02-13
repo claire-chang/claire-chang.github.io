@@ -183,7 +183,7 @@ dfn {
  */
 
 mark {
-  background-color: #ff0;
+  background-color: #fff9c4;
   color: #000;
 }
 
@@ -575,15 +575,24 @@ a{
 }
 a:hover,
 a:active,
-a:fucus{
+a:focus{
   color: #484848;
   text-decoration: none;
 }
+.work-item2 a{
+  color: #01579b;
+}
+.work-item2 a:hover,a:active,a:focus{
+  text-decoration: underline;
+}
 /* list */
-ul{
-  list-style: none;
+ul, ol{
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 32px;
+  /* list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0;  */
 }
 
 /*-------------------------*/
