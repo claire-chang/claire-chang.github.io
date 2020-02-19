@@ -44,6 +44,16 @@ p,ul {
     background-size: cover;
     background-position: center;
 }
+.bg-ut{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-image: url("../images/background/bg-ut.jpg");  
+}
 .bg-petful{
     position: fixed;
     top: 0;
@@ -114,7 +124,7 @@ p,ul {
     background-position: center;
     background-image: url("../images/background/5-other.jpg");  
 }
-.bg:after,.bg-letter:after,.bg-myship:after,.bg-life:after,.bg-marketing:after, .bg-woop:after, .bg-petful:after{
+.bg:after,.bg-letter:after,.bg-myship:after,.bg-life:after,.bg-marketing:after, .bg-woop:after, .bg-petful:after, .bg-ut:after{
     content: "";
     position: absolute;
     top: 0;
