@@ -1,0 +1,88 @@
+.rights{
+    padding: 4em 0;
+    /* padding-top: 7em;
+    padding-right: 0px;
+    padding-bottom: 7em;
+    padding-left: 0px; */
+}
+
+.cursor{
+    cursor: pointer;
+}
+
+.image{
+    width: 100%;
+    display: block;
+}
+
+
+h1, h2, h3, h4, h5, h6, p, li{
+    line-height: 200%;
+}
+
+.work-item{
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+/* carousel */
+.carousel .carousel-indicators li {
+    background-color: #fff;
+    background-color: rgba(70, 70, 70, 0.25);
+}
+
+.design-challenge .carousel .carousel-indicators li {
+  background-color: #fff;
+  /* background-color: rgba(70, 70, 70, 0.25); */
+}
+  
+.carousel .carousel-indicators .active {
+    background-color: #444;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 3.5em;
+  width: 3.5em;
+  outline: black;
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  /* border: 1px solid black; */
+  background-image: none;
+  background-color: #FFB6B7;
+}
+
+.design-challenge .carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 3.5em;
+  width: 3.5em;
+  outline: black;
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  /* border: 1px solid black; */
+  background-image: none;
+  background-color: #34107E;
+}
+
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 2em;
+  color: white;
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 2em;
+  color: white;
+}
+
+/* ut registration */
+.ut-registration mark{
+    background: linear-gradient(180deg,rgba(255,255,255,0) 60%, rgb(255, 186, 132) 50%);
+  }
+
+/* petful */
+.petful mark{
+    background: linear-gradient(180deg,rgba(255,255,255,0) 60%, #FCB15D 50%);
+  }
