@@ -40,8 +40,8 @@ h1, h2, h3, h4, h5, h6, p, li{
     background-color: #444;
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
+.woop .carousel-control-prev-icon,
+.woop .carousel-control-next-icon {
   height: 3.5em;
   width: 3.5em;
   outline: black;
@@ -53,7 +53,7 @@ h1, h2, h3, h4, h5, h6, p, li{
 }
 
 .design-challenge .carousel-control-prev-icon,
-.carousel-control-next-icon {
+.design-challenge .carousel-control-next-icon {
   height: 3.5em;
   width: 3.5em;
   outline: black;
