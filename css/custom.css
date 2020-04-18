@@ -64,6 +64,18 @@ h1, h2, h3, h4, h5, h6, p, li{
   background-color: #34107E;
 }
 
+.ut-registration .carousel-control-prev-icon,
+.ut-registration .carousel-control-next-icon {
+  height: 3.5em;
+  width: 3.5em;
+  outline: black;
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  /* border: 1px solid black; */
+  background-image: none;
+  background-color: #BF5700;
+}
+
 .carousel-control-next-icon:after
 {
   content: '>';
@@ -81,6 +93,10 @@ h1, h2, h3, h4, h5, h6, p, li{
 .ut-registration mark{
     background: linear-gradient(180deg,rgba(255,255,255,0) 60%, rgb(255, 186, 132) 50%);
   }
+
+.radius-img{
+  border-radius: 16px;
+}
 
 /* petful */
 .petful mark{
