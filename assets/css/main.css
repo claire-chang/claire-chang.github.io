@@ -2202,7 +2202,14 @@ input, select, textarea {
 					.features section:first-child {
 						border-top-width: 0 !important;
 					}
-
+			
+			.features > .bio {
+				width: 100%;
+			}
+			.features > .photo {
+				padding: 2em;
+				width: 100%;
+			}
 		}
 
 		@media screen and (max-width: 736px) {
