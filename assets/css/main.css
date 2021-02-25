@@ -1835,10 +1835,12 @@ input, select, textarea {
 		transition: border-color 0.2s ease;
 		background-color: transparent;
 		border: solid 1px !important;
-		border-color: rgba(0, 0, 0, 0.3) !important;
+		border-color: #667eea !important;
+		/* border-color: rgba(0, 0, 0, 0.3) !important; */
 		border-radius: 3em;
 		background-color: rgba(255,255,255,0.4) !important;
-		color: #888 !important;
+		color: #667eea !important;
+		/* color: #888 !important; */
 		cursor: pointer;
 		display: inline-block;
 		font-size: 0.6em;
@@ -1938,6 +1940,8 @@ input, select, textarea {
 		button:disabled,
 		.button.disabled,
 		.button:disabled {
+			border-color: rgba(0, 0, 0, 0.3) !important;
+			color: rgba(0, 0, 0, 0.3) !important;
 			cursor: default;
 			opacity: 0.5;
 			pointer-events: none;
