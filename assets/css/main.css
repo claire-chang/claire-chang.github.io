@@ -55,8 +55,10 @@ body {
 }
 
 mark {
-	background-color: transparent;
-	color: inherit;
+	background-color: #ace0f9;
+	display: inline-block;
+	line-height: 0em;
+	padding-bottom: 0.6em;
 }
 
 input::-moz-focus-inner {
@@ -3095,6 +3097,11 @@ input, select, textarea {
 			background-size: cover;
 		}
 
+		.mostsim {
+			background-image: url("../images/thumb-mostsim.jpg");
+			background-size: cover;
+		}
+
 			.spotlights > section > .content > .inner {
 				-moz-transform: translateX(0) translateY(0);
 				-webkit-transform: translateX(0) translateY(0);
@@ -4035,6 +4042,9 @@ input, select, textarea {
 	padding-right: 1em;
 }
 .flex > div:nth-child(2) {
+	padding-left: 1em;
+}
+.flex > div:nth-child(3) {
 	padding-left: 1em;
 }
 
