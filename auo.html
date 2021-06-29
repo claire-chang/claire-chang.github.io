@@ -105,7 +105,7 @@
 						<div class="inner">
 							<div>
 								<h5>PROBLEM BACKGROUND</h5>
-								<h2>What are the usability issues for the digitalized system?</h2>
+								<h2>How can we improve the design of the new digitalized system?</h2>
 								<p>
 									Dispatch System transforms the traditional maintenance management system into a digitalized one, as the company aims to implement ML models to improve the efficiency of the maintenance work. However, users, AUO's maintenance team, are experiencing a hard time to use the new system.
 								</p>
@@ -130,6 +130,7 @@
 					<section class="wrapper" style="background-color: #fdfdfd;">
 						<div class="inner">
 							<h2>User Research</h2>
+							<p>I conducted user interviews and cognitive walkthrough to explore unsatisfied user needs, and did comparative analysis to understand the strengths and weaknesses of the current product.</p>
 							<div class="flex">
 								<div>
 									<h5>TAKEAWAY #1</h5>
@@ -138,6 +139,7 @@
 										This complex system is designed to serve multiple roles. Ideally, every role should interact with this system to complete their tasks. <br/>
 										However, the current usage situation shows that an assistant help with all the transformatioin of the digitalized work.
 									</p>
+									<em>→ Users are not using the system as expected.</em>
 								</div>
 								<div>
 									<a href="https://miro.com/app/board/o9J_kvueLUI=/" target="_blank" style="border: none;">
@@ -153,6 +155,7 @@
 									<p>
 										When further investigating the workflow of each task, it turns out the system requires heavy cognitive load for users to complete their tasks.
 									</p>
+									<em>→ “Recognition rather than recall.”</em>
 								</div>
 								<div>
 									<img src="assets/images/auo/workflow.jpg" style="width: 100%;">
@@ -166,10 +169,13 @@
 					<section class="wrapper">
 						<div class="inner">
 							<h2>Design Solution</h2>
+							<h5>Reframe Challenge</h5>
+							<h3>How might we enhance the system to reduce users’ cognitive burden when creating and assigning work orders?</h3>
+							<p>In order to solve the challenge, I decided to focus on developing new design solutions that encourage users to complete tasks without outsourcing the work, such as creating and assigning work orders.</p>
 							<div class="flex">
 								<div>
 									<h5>DESIGN OPPORTUNITY</h5>
-									<h3>Leverage digital product’s strengths to help users complete main tasks</h3>
+									<h3>Leverage digital product’s strengths to ease the burden and help users complete main tasks</h3>
 									<p>
 										Instead of asking users to remember things, the system can provide automatic information <br/>to users to help them complete tasks without heavy cognitive load.
 										<br/><br/>
@@ -177,9 +183,9 @@
 								</div>
 							</div>
 							<div class="flex">
-								<div style="flex: 1;">
-									<h5>CONCEPT #1</h5>
-									<h3>Assign and Schedule Work Order</h3>
+								<div style="flex: 2;">
+									<h5>SOLUTION #1</h5>
+									<h2>Assign and Schedule Work Order</h2>
 									<ul>
 										<li>System provides information to eliminate cognitive overload.</li>
 										<li>Users are able to do multi tasks on a single page.</li>
@@ -189,6 +195,33 @@
 									<img src="assets/images/auo/assign-order.jpg" style="width: 100%; border-radius: 0.5em;">
 								</div>
 							</div>
+							<h3>Design concepts</h3>
+							<div class="flex">
+								<div>
+									<span>A. View the schedule of executors, drag & drop</span>
+									<img src="assets/images/auo/排班表1.jpg" style="width: 100%; border-radius: 0.5em;">
+								</div>
+								<div>
+									<span>B. View the schedule of executors, drag & drop</span>
+									<img src="assets/images/auo/排班表2.jpg" style="width: 100%; border-radius: 0.5em;">
+								</div>
+							</div>
+							<div class="flex">
+								<div>
+									<span>C. View the schedule of sites with orders, click to assign</span>
+									<img src="assets/images/auo/排班表3.jpg" style="width: 100%; border-radius: 0.5em;">
+								</div>
+								<div>
+									<span>D. View the schedule of orders, click to assign</span>
+									<img src="assets/images/auo/排班表4.jpg" style="width: 100%; border-radius: 0.5em;">
+								</div>
+							</div>
+							<h3>Why choose design C?</h3>
+							<ul>
+								<li><b>Fit user needs</b>: Being able to look at unassigned orders by each site.</li>
+								<li><b>Technical limitations</b>: Click-to-assign is more feasible and accessible than drag-and-drop.</li>
+							</ul>
+							<h2>Design outcome</h2>
 							<div class="flex">
 								<div>
 									<span>Step 1: View schedule</span>
@@ -203,17 +236,23 @@
 							</div>
 							<div class="flex">
 								<div style="flex: 1;">
-									<h5>CONCEPT #2</h5>
-									<h3>Add path to create order</h3>
+									<h5>SOLUTION #2</h5>
+									<h2>New path to create order</h2>
 									<p>To make the workflow of creating orders more intuitive, I reorganized the steps and cut it down from 6 steps to 4 steps with simplified interactions.</p>
 								</div>
 								<div style="flex: 2;">
 									<img src="assets/images/auo/create-order.jpg" style="width: 100%; border-radius: 0.5em;">
 								</div>
 							</div>
+							<h3>Design concepts</h3>
+							<p>I explored design solutions from different entry points in the process.</p>
+							<img src="assets/images/auo/solution2-concept.jpg" style="width: 100%; border-radius: 0.5em;">
+							<br/><br/>
+							<h3>Why choose design B?</h3>
+							<p>Considering bulk actions and how the information should be automatically filled, design B is the only entry point that would not cause any data structure error and would not require users to recall information.</p>
 							<div class="flex">
 								<div>
-									<span>Added path: Create order from alarm list</span>
+									<h2>Design outcome</h2>
 									<img src="assets/images/auo/create-option.png" style="width: 100%; border-radius: 0.5em;">
 								</div>
 								
