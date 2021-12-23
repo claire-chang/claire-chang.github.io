@@ -116,10 +116,11 @@ input, select, textarea {
 
 /* Type */
 	@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 	body, input, select, textarea {
 		color: rgba(0, 0, 0, 0.55);
-		font-family: 'Montserrat', sans-serif;
+		font-family: 'Poppins', sans-serif;
 		font-size: 16.5pt;
 		font-weight: normal;
 		line-height: 1.75;
@@ -3988,7 +3989,7 @@ input, select, textarea {
 
 .parallex > .title > * {
 	margin: 0;
-	letter-spacing: 0.1em;
+	/* letter-spacing: 0.1em; */
 }
 
 .parallex > .title > img {
