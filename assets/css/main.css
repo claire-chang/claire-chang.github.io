@@ -3092,6 +3092,11 @@ input, select, textarea {
 			background-size: cover;
 		}
 
+		.mastercard {
+			background-image: url("../images/thumb-mastercard.jpg");
+			background-size: cover;
+		}
+
 		.ut {
 			background-image: url("../images/thumb-ut.jpg");
 			background-size: cover;
