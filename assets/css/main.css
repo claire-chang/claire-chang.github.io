@@ -3092,6 +3092,12 @@ input, select, textarea {
 			background-size: cover;
 		}
 
+		.monetize {
+			background-color: #8EC5FC; background-image: 
+			linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+			background-size: cover;
+		}
+
 		.mastercard {
 			background-image: url("../images/thumb-mastercard.jpg");
 			background-size: cover;
