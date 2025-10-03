@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Reporting Case Study - Claire Chang</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+   
+    @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+    body {
+      font-family: "Work Sans", sans-serif;
+      background: #fafafa;
+      color: #333;
+      line-height: 1.6;
+    }
+    h1, h2, h3 {
+      font-weight: 400;
+      margin-bottom: 20px;
+    }
+      h1 { font-size: 2.5rem; }
+      h5 {
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #667eea;
+      }
+      h3 { font-size: 1.4rem; }
+
+    a {
+        text-decoration: none;
+        color: #333;
+    }
+    a:hover {
+        color: #000;
+    }
+    .case-section {
+      padding: 60px 0;
+    }
+    .case-section:last-child { border-bottom: none; }
+    .title-note {
+      font-size: 0.9rem;
+      color: #888;
+      margin-top: -15px;
+      margin-bottom: 30px;
+      z-index: 2;
+    }
+    .back-button {
+      display: inline-flex;
+      align-items: center;
+      font-size: 1rem;
+      color: #333333;
+      text-decoration: none;
+      margin-bottom: 15px;
+      transition: color 0.2s ease;
+      position: relative;
+      z-index: 10;
+      pointer-events: auto;
+      
+    }
+    .back-button:hover {
+      color: #000000;
+      text-decoration: none;
+    }
+
+    .header-section::before {
+      content: "";
+      position: absolute;
+      top: 0%;
+      left: 18%;
+      width: 800px; /* 👈 controls circle size */
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(
+        circle,
+        rgba(245, 180, 100, 0.25),
+        transparent 70%
+      );
+      z-index: 0;
+    }
+
+    .header-section .bg-white.rounded {
+      position: relative;
+      z-index: 2;
+    }
+    .header-section .bg-white.rounded img {
+      position: relative;
+      z-index: 2;
+      display: block;
+      margin: 0 auto;
+    }
+    .title-note a {
+      position: relative;
+      z-index: 3;
+    }
+    .title-note a:hover {
+        text-decoration: underline;
+    }
+    .hover-button {
+        border: #333 0.5px solid;
+        padding: 8px 12px 8px 12px;
+        border-radius: 8px;
+        background: #fff;
+        color: #333;
+        /* opacity: 0.3; */
+        text-decoration: none;
+    }
+
+    .hover-button:hover {
+        border: 0;
+        background: #333;
+        color: #fff;
+    }
+
+    .bottom-images img {
+      /* margin-right: 32px; */
+      margin-bottom: 40px;
+    }
+    .bottom-images img:last-child {
+      margin-right: 0;
+    }
+        
+    #footer .inner {
+      text-align: center;
+    }
+    #footer {
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      background: #333333;
+      color: #fff;
+      padding: 32px 0 32px 0;
+      border: none;
+    }
+    #footer .menu {
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Header -->
+    <div id="header" class="row case-section header-section">
+      <div class="col-lg-8 mx-auto">
+        <div class="header-section">
+            <a href="index2.html" class="back-button">
+            <i class="fas fa-arrow-left"></i>
+            <span class="ms-2">Back</span>
+            </a>
+            <h1>AI-powered Reporting</h1>
+            <div class="title-note">Led concept-to-roadmap through prototyping and cross-team alignment.
+            </div>
+            <div class="bg-white rounded">
+            <img src="assets/images/reporting/home.png" alt="Reporting home" class="img-fluid rounded">
+            </div>
+            </div>
+      </div>
+    </div>
+
+    <!-- Problem -->
+    <div class="row case-section">
+      <div class="col-lg-8 mx-auto">
+        <h5>Problem</5>
+        <h3>Complex report experience but heavy usage</h3>
+        <p>
+          Reporting is one of the most heavily used features on our platform—80%+ of users rely on it at least once in a month. Yet the process of building a report is cumbersome:
+        </p>
+        <ul>
+          <li>Dozens of report types</li>
+          <li>Dozens of dimensions and metrics to choose from</li>
+          <li>Constant trial and error to “get it right”</li>
+        </ul>
+        <p>This complexity caused frustration and inefficiency, and we saw a chance to reimagine reporting with AI assistance.</p>
+        <img src="assets/images/reporting/research.png" alt="Problem statement" class="img-fluid rounded">
+      </div>
+    </div>
+
+    <!-- Approach -->
+    <div class="row case-section">
+      <div class="col-lg-8 mx-auto">
+        <h5>Approach</h5>
+        <h3>Vibe coding to explore opportunities </h3>
+        <p>I initiated the exploration when no one was actively working on it. To move beyond ideas and show feasibility, I used ChatGPT and v0.dev to build a working proof of concept powered by the OpenAI API.</p>
+        <p>The prototype is to leverage LLM to interpret natural language requests and generate real-time report configurations.</p>
+        <ul>
+          <li>Conversation starter: Having a tangible demo helped me shift discussions from abstract “what ifs” to concrete possibilities.</li>
+          <li>Collaboration: After the POC, another designer joined. Together with PM and engineering, we started framing the vision, success metrics, and constraints.</li>
+        </ul>
+        <div class="my-3">
+          <img src="assets/images/reporting/poc.png" alt="User journey mapping" class="img-fluid rounded">
+        </div>
+        <br/><br/>
+        <h3>From prototype to roadmap</h3>
+        <p>To ensure the idea wasn’t just “cool tech,” I drove validation and alignment:</p>
+        <ul>
+          <li>Stakeholder demos to spark interest and gain executive sponsorship</li>
+          <li>User research with existing customers to understand where AI could truly reduce friction vs. create new confusion.</li>
+          <li>Competitive review to calibrate expectations on what AI reporting could and should deliver.</li>
+          <li>Business metrics alignment with PM to connect the solution to tangible outcomes (faster report creation, increased adoption of advanced reports).</li>
+        </ul>
+        <p>This process transformed the AI reporting concept from a side project into a formally prioritized initiative, now on the product roadmap and in implementation.</p>
+        <br/>
+        <div class="my-3">
+          <div class="bottom-images">
+            <img src="assets/images/reporting/home.png" alt="Final Forecast Builder solution" class="img-fluid rounded">
+            <img src="assets/images/reporting/loading.png" alt="Final Forecast Builder solution" class="img-fluid rounded">
+            <img src="assets/images/reporting/result.png" alt="Final Forecast Builder solution" class="img-fluid rounded">
+          </div>
+        </div>
+        
+        <div style="margin-top: 40px;">
+            <a href="#header" class="hover-button">To the top ↑</a>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  <!-- Footer -->
+        <footer id="footer" class="wrapper alt">
+            <div class="inner">
+                    <span>&copy; 2025 made with ☕ by Claire Chang</span>
+            </div>
+        </footer>
+</body>
+</html>
