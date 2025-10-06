@@ -1,234 +1,165 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Claire Chang | Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta property="og:image" content="http://claire-chang.github.io/thumbnail.png">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claire Chang | Product Designer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="assets/css/style2.css" rel="stylesheet">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-MBPTS9J');</script>
+	<!-- End Google Tag Manager -->
+</head>
 
-		<!-- CSS -->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+<body class="is-preload">
+	<script>
+      if (sessionStorage.getItem("authenticated") !== "true") {
+        window.location.href = "login.html";
+      }
+    </script>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MBPTS9J"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+    
+    <!-- Header Section -->
+    <div class="header-section hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="intro-text">
+                        Hi there, I'm Claire Chang.<br>
+                        Product designer at Microsoft AI Monetization<br>
+                        Based in Seattle, WA
+                    </div>
+                    <h1 class="main-title">
+                        turning complex challenges
+                        into actionable experiences
+                    </h1>
+                </div>
+            </div>
+        </div>
+         <!-- Projects Indicator -->
+        <div class="projects-indicator">
+            <div class="arrow-down">↓</div>
+        </div>
+    </div> 
 
-		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    	<link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- Projects Section -->
+    <div class="container">
+        <!-- Forecast Builder Project -->
+        <div class="project-card">
+            <div class="row g-0">
+                <div class="col-lg-6">
+                    <div class="project-content">
+                        <div class="microsoft-logo">
+							<img src="./assets/images/icon-microsoft.png" style="height: 24px; width: auto; object-fit: contain; vertical-align: middle;" alt="AUO">
+                            <span class="monetize-text">Monetize</span>
+                        </div>
+                        <h2 class="project-title">Forecast Builder</h2>
+                        <p class="project-description">
+                            End-to-end design delivery, from research, ideation, strategy to execution.
+                        </p>
+                        <br/><br/>
+                        <a href="forecast.html" class="hover-button" style="display:inline-block;">View project</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="project-image">
+                        <img src="assets/images/forecast 2/thumbnail.png" style="width: 100%;">
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <!-- Copilot Reporting Project -->
+        <div class="project-card">
+            <div class="row g-0">
+                <div class="col-lg-6">
+                    <div class="project-content">
+                        <div class="microsoft-logo">
+							<img src="./assets/images/icon-microsoft.png" style="height: 24px; width: auto; object-fit: contain; vertical-align: middle;" alt="AUO">
+                            <span class="monetize-text">Monetize</span>
+                        </div>
+                        <h2 class="project-title">AI-powered Reporting</h2>
+                        <p class="project-description">
+                            Led concept-to-roadmap through prototyping and cross-team alignment.
+                        </p>
+                        <br/><br/>
+                        <a href="reporting.html" class="hover-button" style="display:inline-block;">View project</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="project-image">
+                        <img src="assets/images/reporting/home.png" style="width: 100%;">
+                    </div>
+                </div>
+            </div>
+        </div>
 
-		<!-- encript -->
-		<script>
-			function decrypt(str, pwd) {
-			if(str == null || str.length < 8) {
-			alert('A salt value could not be extracted from the encrypted message because its length is too short. The message cannot be decrypted.');
-			return;
-			}
-			if(pwd == null || pwd.length <= 0) {
-			alert('Please enter a password with which to decrypt the message.');
-			return;
-			}
-			var prand ='';
-			for(var i=0; i<pwd.length; i++) {
-			prand += pwd.charCodeAt(i).toString();
-			}
-			var sPos = Math.floor(prand.length / 5);
-			var mult = parseInt(prand.charAt(sPos) + prand.charAt(sPos*2) + prand.charAt(sPos*3) + prand.charAt(sPos*4) + prand.charAt(sPos*5));
-			var incr = Math.round(pwd.length / 2);
-			var modu = Math.pow(2, 31) - 1;
-			var salt = parseInt(str.substring(str.length - 8, str.length), 16);
-			str = str.substring(0, str.length - 8);
-			prand += salt;
-			while(prand.length > 10) {
-			prand = (parseInt(prand.substring(0, 10)) + parseInt(prand.substring(10, prand.length))).toString();
-			}
-			prand = (mult * prand + incr) % modu;
-			var enc_chr = '';
-			var enc_str = '';
-			for(var i=0; i<str.length; i+=2) {
-			enc_chr = parseInt(parseInt(str.substring(i, i+2), 16) ^ Math.floor((prand / modu) * 255));
-			enc_str += String.fromCharCode(enc_chr);
-			prand = (mult * prand + incr) % modu;
-			}
-			return enc_str;
-			}
-			
-			function protection() {
-			encURL = '85cb5d0c3eaf87cda6854eb1a18e1c91b99f753060555eed7f99a7ba491273739c7a51665aebe932eb9ab84e221b791ed2a8bda2c609eca49bd8fe4e60a906273b615e7c263d63bed2a19ced2383bbc4d3489db13b10be7ae42833cec97336713a7659492f2618a1f7e9c2ac413749c09fc5d471de55a42a9b677e620ad687585e4cfe6559c20683bd967c922e9059b9c8b04ce3c28ebd5f24af9ce8f308fbd8e1f406e321fbed2ad54f273d03b16bec';
-			password=prompt('Please enter password:','');
-			if (password != '' && password != null) {
-			decURL=decrypt(encURL, password);
-			location.href= decURL;
-			}
-			}
-		</script>
-			
+        <!-- Data Visualization Project -->
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="microsoft-logo">
+                            <img src="./assets/images/icon-microsoft.png" style="height: 24px; width: auto; object-fit: contain; vertical-align: middle;" alt="AUO">
+                            <span class="monetize-text">Clarity</span>
+                        </div>
+                        <h2 class="project-title">AI Agent Branding Page</h2>
+                        <p class="project-description">
+                            0 to 1 design to launch, from motion illustration to brand alignment, under tight timeline.
+                        </p>
+                        <br/><br/>
+                        <span>COMING SOON</span>
+                    </div>
+                    <div class="project-image"></div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="microsoft-logo">
+                            <img src="./assets/images/icon-mastercard.png" style="height: 24px; width: auto; object-fit: contain; vertical-align: middle;" alt="AUO">
+                        </div>
+                        <h2 class="project-title">Data visualization system</h2>
+                        <p class="project-description">
+                            Create design system components, patterns, guidelines and documentation for a data visualization platform.
+                        </p>
+                        <br/><br/>
+                        <a 
+                            href="https://www.figma.com/proto/xwBZZRO3MiIieObHnQMjUF/Mastercard-data-viz?page-id=2%3A835&node-id=9%3A62&viewport=257%2C48%2C0.04&scaling=contain&starting-point-node-id=9%3A62" 
+                            target="_blank"
+                            class="hover-button" 
+                            style="display:inline-block;">
+                            View project
+                        </a>
+                    </div>
+                    <div class="project-image"></div>
+                </div>
+            </div>
+        </div>
 
-		<!-- Google search html tag -->
-		<meta name="google-site-verification" content="zBz_fLZd-2cOg6dCYsFbRUCBDnOgE7_pJ_brapxsJqM" />
-
-		<!-- Google Tag Manager -->
-		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-			'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-			})(window,document,'script','dataLayer','GTM-MBPTS9J');</script>
-		<!-- End Google Tag Manager -->
-	</head>
-
-	<body class="is-preload">
-		<!-- Google Tag Manager (noscript) -->
-		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MBPTS9J"
-			height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-		<!-- End Google Tag Manager (noscript) -->
-
-		<!-- Sidebar -->
-			<section id="sidebar">
-				<div class="inner">
-					<nav>
-						<ul>
-							<li><a href="#intro">Welcome</a></li>
-							<li><a href="#one">Projects</a></li>
-							<li><a href="#two">About</a></li>
-							<li><a href="#three">Get in touch</a></li>
-						</ul>
-					</nav>
-				</div>
-			</section>
-
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Intro -->
-					<section id="intro" class="wrapper style1 fullscreen fade-up">
-						<div class="inner">
-							<h1>Hi, I'm Claire.</h1>
-							<h5>Product Designer @Microsoft</h5>
-							<p>
-								A Product Designer passionate about developing design solutions that help users to complete complicated tasks.<br/>
-							</p>
-							<ul class="actions">
-								<li><a href="#one" class="button scrolly">Learn more</a></li>
-							</ul>
-						</div>
-					</section>
-
-				<!-- One -->
-					<section id="one" class="wrapper style2 spotlights">
-						<section class="">
-							
-							<div class="content monetize">
-								<div class="inner">
-									<img src="./assets/images/icon-microsoft.png" style="height: 1em; object-fit: cover; vertical-align: middle;" alt="AUO">
-									<h2>Monetize</h2>
-									<p>Develop enterprise ad solutions for publishers, focusing on varied client needs and enhancing workflows throughout the user journey.</p>
-									<ul class="actions">
-										<li><a href="monetize.html" class="button">OVERVIEW <span class="icon solid fa-arrow-right"></span></a></li>
-									</ul>
-								</div>
-							</div>
-							
-							<div class="content mastercard">
-								<div class="inner">
-									<img src="./assets/images/icon-mastercard.png" style="height: 1em; object-fit: cover; vertical-align: middle;" alt="AUO">
-									<h2>Data Viz Design System</h2>
-									<p>Create design system components, patterns, guidelines and
-										documentation for a data visualization platform.</p>
-									<ul class="actions">
-										<li><a onclick="protection()" class="button">PROJECT OVERVIEW <span class="icon solid fa-lock"></span></a></li>
-										<!-- <button onclick="protection()">PROJECT OVERVIEW <span class="icon solid fa-lock"></span></button> -->
-									</ul>
-								</div>
-							</div>
-							
-						</section>
-						<section class="">
-							<div class="content auo">
-								<div class="inner">
-									<img src="./assets/images/icon-auo.png" style="height: 1em; object-fit: cover; vertical-align: middle;" alt="AUO">
-									<h2>Solar Dispatch System</h2>
-									<p>Collaborate with engineers to reimagine work order dispatch system
-										across web and mobile platform.</p>
-									<ul class="actions">
-										<li><a href="auo.html" class="button">PROJECT OVERVIEW <span class="icon solid fa-arrow-right"></span></a></li>
-									</ul>
-								</div>
-							</div>
-							<!-- <div class="content petful">
-								<div class="inner">
-									<h2>Petful</h2>
-									<p>An App that builds a bridge between pet fostering parents and the animal shelter/organization.</p>
-									<ul class="actions">
-										<li><a href="petful.html" class="button">VIEW CASE STUDY <span class="icon solid fa-arrow-right"></span></a></li>
-									</ul>
-								</div>
-							</div> -->
-							<div class="content mostsim">
-								<div class="inner">
-									<img src="./assets/images/icon-mostsim.png" style="height: 1.2em; object-fit: cover; vertical-align: middle;" alt="UT">
-									<h2>eCommerce Website Redesign</h2>
-									<p>Redesign an E-commerce website facing Japanese market.</p>
-									<ul class="actions">
-										<li><a href="mostsim.html" class="button">VIEW CASE STUDY <span class="icon solid fa-arrow-right"></span></a></li>
-									</ul>
-								</div>
-							</div>
-							
-						</section>
-					</section>
-
-				<!-- Two -->
-					<section id="two" class="wrapper style3 fade-up">
-						<div class="inner">
-							<h2>About</h2>
-							
-							<div class="features">
-								<section class="bio">
-									<p>Hi, I'm Claire Chang. I'm working as a Product Designer at Microsoft for enterprise products. <br/><br/>
-										I've worked on different problem areas, including advertising, finance, e-commerce, and work force. Through these experiences, I've gained the knowledge to approach intricate systems and understandings of technical limitations.<br/><br/>
-										Currently, I'm developing skills not only in UX design & research, but also in web development. I've developed a <a href="https://changclaire30.github.io/Neumorphism-CSS-Generator/" target="_blank">☞ fun tool</a> that can customize and generate neumorphism/soft UI css code.
-									</p>
-									<ul class="actions">
-										<li><a href="/resume-clairechang.pdf" class="button" target="_blank">RESUME</a></li>
-									</ul>
-								</section>
-								<section class="photo">
-									<img src="./assets/images/bio.png" alt="" style="width: 100%; object-fit: cover; vertical-align: middle;">
-									<!-- <a href="#" class="image"><img src="./assets/images/bio.jpg" alt=""/></a> -->
-								</section>
-							</div>
-						</div>
-					</section>
-
-				<!-- Three -->
-					<section id="three" class="wrapper style1 fade-up">
-						<div class="inner">
-							<h2>Get in touch</h2>
-							<ul class="icons">
-								<li><a href="https://www.linkedin.com/in/chang-claire/" class="icon brands fa-linkedin-in" target="_blank"><span class="label">LinkedIn</span></a></li>
-								<li><a href="http://github.com/changclaire30" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
-								<li><a href="mailto:clairechang.ux@gmail.com" class="icon solid fa-envelope" target="_blank"><span class="label">Email</span></a></li>
-							</ul>
-						</div>
-					</section>
-
-			</div>
-
-		<!-- Footer -->
-			<footer id="footer" class="wrapper style1-alt">
-				<div class="inner">
-					<ul class="menu">
-						<li>&copy; 2023 made with ☕ by Claire Chang</li>
-					</ul>
-				</div>
-			</footer>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+    
+    </div>
+	<!-- Footer -->
+	<footer id="footer" class="wrapper style1-alt">
+		<div class="inner">
+			<ul class="menu">
+				<li>&copy; 2025 made with ☕ by Claire Chang</li>
+			</ul>
+		</div>
+	</footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
+								
 
+		

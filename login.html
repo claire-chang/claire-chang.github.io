@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Protected Site Login</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+        html, body, div, span, applet, object,
+        iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+        pre, a, abbr, acronym, address, big, cite,
+        code, del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var, b,
+        u, i, center, dl, dt, dd, ol, ul, li, fieldset,
+        form, label, legend, table, caption, tbody,
+        tfoot, thead, tr, th, td, article, aside,
+        canvas, details, embed, figure, figcaption,
+        footer, header, hgroup, menu, nav, output, ruby,
+        section, summary, time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font-family: "Work Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+            vertical-align: baseline;}
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+    }
+    h1, h2, h3 {
+      font-weight: 400;
+      margin-bottom: 20px;
+    }
+    h1 { font-size: 2.5rem; }
+    h5 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #667eea;
+    }
+    h3 { font-size: 1.4rem; }
+    #login-box {
+      background: white;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      text-align: center;
+    }
+    input { 
+        margin: 10px 0; 
+        padding: 8px; 
+        width: 200px; 
+        border-radius: 8px;
+        border: #333 0.5px solid;
+    }
+    .hover-button {
+        border: #333 0.5px solid;
+        padding: 4px 12px 4px 12px;
+        border-radius: 8px;
+        background: #fff;
+        color: #333;
+        /* opacity: 0.3; */
+        text-decoration: none;
+        height: 32px;
+    }
+
+    .hover-button:hover {
+        border: 0;
+        background: #333;
+        color: #fff;
+    }
+  </style>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MBPTS9J');</script>
+  <!-- End Google Tag Manager -->
+</head>
+
+<body class="is-preload">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MBPTS9J"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <div class="container">
+    <div class="row justify-content-center align-items-center" style="min-height: 100vh;">
+      <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+        <div id="login-box">
+          <h3>Claire Chang's Portfolio</h3>
+          <p style="margin-bottom: 16px; color: #333;">Peek behind the curtain to see my design work.</p>
+          <input type="password" id="inputSecret" placeholder="Password" class="form-control mb-3">
+          <button class="hover-button w-100 mb-2" onclick="validateAccess()">Submit</button>
+          <p id="error" style="color:#4e0202; margin-top: 8px;"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const referenceHash = "2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824";
+
+    async function validateAccess() {
+      const userValue = document.getElementById("inputSecret").value;
+      const hashBuffer = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(userValue));
+      const hashArray = Array.from(new Uint8Array(hashBuffer));
+      const hashHex = hashArray.map(b => b.toString(16).padStart(2, "0")).join("");
+      if(hashHex === referenceHash) {
+        sessionStorage.setItem("authenticated", "true");
+        window.location.href = "index.html";
+      } else {
+        document.getElementById("error").textContent = "Oops! That password isn’t correct. Contact me at clairechang.ux@gmail.com for access.";
+      }
+    }
+
+    if (sessionStorage.getItem("authenticated") === "true") {
+      window.location.href = "index.html";
+    }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

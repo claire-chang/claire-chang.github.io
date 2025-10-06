@@ -1,285 +1,153 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Forecast | Claire Chang</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta property="og:image" content="http://claire-chang.github.io/thumbnail.png">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forecast Builder | Claire Chang</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="assets/css/style2.css" rel="stylesheet">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-MBPTS9J');</script>
+	<!-- End Google Tag Manager -->
+</head>
 
-		<!-- CSS -->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+<body class="is-preload">
+    <!-- Check -->
+	<script>
+      if (sessionStorage.getItem("authenticated") !== "true") {
+        window.location.href = "login.html";
+      }
+    </script>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MBPTS9J"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
 
-		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    	<link rel="icon" href="favicon.ico" type="image/x-icon">
+    <div class="container">
 
-		<!-- Google search html tag -->
-		<meta name="google-site-verification" content="zBz_fLZd-2cOg6dCYsFbRUCBDnOgE7_pJ_brapxsJqM" />
+        <!-- Header -->
+        <div id="header" class="row header-section">
+        <div class="col-lg-8 mx-auto">
+            <div class="header-section">
+                <a href="index.html" class="back-button">
+                    <i class="fas fa-arrow-left"></i>
+                    <span class="ms-2">Back</span>
+                </a>
+                <h1 class="mb-4 mt-4">Forecast Builder</h1>
+                <div class="title-note">End-to-end design delivery, from research, ideation, strategy to execution.
+                    <br/>
+                    <a href="https://learn.microsoft.com/en-us/xandr/monetize/release-notes-20250725" target="_blank" rel="noopener noreferrer">Release doc</a>
+                </div>
+                <div class="bg-white rounded">
+                <img src="assets/images/forecast 2/thumbnail.png" alt="Forecast builder dashboard" class="img-fluid rounded">
+                </div>
+                </div>
+        </div>
+        </div>
 
-		<!-- No index -->
-		<meta name=”robots” content=”noindex”>
+        <!-- Context -->
+        <div class="row case-section">
+            <div class="col-lg-8 mx-auto">
+                <h5>Context</h5>
+                <h3>A challenge to migrate one product to another</h3>
+                <p>
+                Our leadership decided to migrate Yield Analytics into our core product, Monetize. 
+                This wasn’t just a technical move: Yield Analytics was generating over $3M in annual revenue, 
+                and any disruption risked client churn. At the same time, its workflows were outdated—key forecasting 
+                functions were scattered across disconnected pages, forcing publishers to jump between products for yield 
+                management, campaign planning, and troubleshooting. This created a clear design opportunity: preserve 
+                critical revenue features while modernizing the workflow to improve efficiency and retention.
+                </p>
+            </div>
+        </div>
 
-		<!-- Google Tag Manager -->
-		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-			'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-			})(window,document,'script','dataLayer','GTM-MBPTS9J');</script>
-		<!-- End Google Tag Manager -->
-	</head>
+        <!-- Research -->
+        <div class="row case-section">
+            <div class="col-lg-8 mx-auto">
+                <h5>Research</h5>
+                <h3>Redefining the experience, not just migrating it</h3>
+                <p>I led research to understand how publishers actually used Yield Analytics. Key insights included:</p>
+                <br/>
+                <ul>
+                <li>Core features were spread across pages with no workflow connection, creating inefficiency.</li>
+                <li>There was little existing knowledge of how users transitioned between Yield Analytics and Monetize.</li>
+                </ul>
+                <br/>
+                <p>To close these gaps, I interviewed internal experts and mapped the end-to-end user journey.</p>
+                <div class="my-3">
+                    <img src="assets/images/forecast 2/research diagram.png" alt="User journey mapping" class="img-fluid rounded">
+                </div>
+                <p>
+                To complement this, I created a “Publisher Ad Agent” with Copilot Studio, anticipating 
+                common publisher questions and helping the team ground our design decisions in real user needs.
+                </p>
+                <div class="my-3">
+                    <img src="assets/images/forecast 2/agent.png" alt="Agent" class="img-fluid rounded" style="max-width:60%;display:block;margin:0 auto;">
+                </div>
+            </div>
+        </div>
 
-	<body class="is-preload">
-		<!-- Google Tag Manager (noscript) -->
-		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MBPTS9J"
-			height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-		<!-- End Google Tag Manager (noscript) -->
+        <!-- Ideation -->
+        <div class="row case-section">
+            <div class="col-lg-8 mx-auto">
+                <h5>Ideation</h5>
+                <h3>Prioritizing features strategically</h3>
+                <p>
+                Using the mapped user journeys, I identified where Yield Analytics features naturally aligned 
+                with Monetize workflows. I created wireframes to visualize how those functions could be embedded 
+                into existing flows.
+                </p>
+                <p>
+                Through discussions with PMs and engineers, I facilitated alignment on which features to tackle first. 
+                We chose forecast builder because it had the highest user demand, delivered foundational business value, 
+                and was technically achievable in the near term. 
+                </p>
+                <div class="my-3">
+                <img src="assets/images/forecast 2/ideation.png" alt="Wireframes of feature prioritization" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
 
-		<!-- Header -->
-			<header id="header">
-				<a href="index.html#one" class="title"><span class="icon solid fa-arrow-left"></span></a>
-				<!-- <nav>
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="generic.html" class="active">Generic</a></li>
-						<li><a href="elements.html">Elements</a></li>
-					</ul>
-				</nav> -->
-			</header>
+        <!-- Solution -->
+        <div class="row case-section">
+            <div class="col-lg-8 mx-auto">
+                <h5>Solution</h5>
+                <h3>An experience that connects workflows</h3>
+                <p>
+                I led multiple rounds of design iteration, testing, and alignment with stakeholders to refine 
+                the forecast builder experience. The solution preserved critical forecasting functionality while 
+                addressing key pain points: publishers can now continue directly into next-step actions from the same 
+                page, eliminating unnecessary context switching and saving significant task time.
+                </p>
+                <p>
+                Beyond the immediate solution, I created vision artifacts mapping where Yield Analytics features would 
+                live within Monetize. This helped leadership balance near-term delivery with a long-term roadmap.
+                </p>
+                <div class="my-3">
+                <img src="assets/images/forecast 2/summary.png" alt="Final Forecast Builder solution" class="img-fluid rounded">
+                </div>
+                
+                <div style="margin-top: 40px;">
+                    <a href="#header" class="hover-button">To the top ↑</a>
+                </div>
+            </div>
+        </div>
+    
+    </div>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Main -->
-					<section id="main" class="wrapper">
-						<div class="parallex" style="background-color: #8EC5FC; background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);">
-							<div class="title">
-								<img src="assets/images/icon-microsoft.png">
-								<h1>Monetize Forecasting</h1>
-								<p>Enterprise Ads Solutions for Publishers</p>
-								
-							</div>
-						</div>
-
-						<div class="inner" style="position: relative;">
-							<!-- hover card -->
-							<div class="hovercard">
-								<div class="flex">
-									<div>
-										<p>
-											Led design exploration and drive cross-functional conversations to build vision beyond reqruiements.
-                                        </p>
-										<h5>TEAM</h5>
-										<p>
-											1 product designer (me)<br/>
-											3 product managers<br/>
-											2 product leaders<br/>
-											1 engineering manager, 9 engineers
-										</p>
-									</div>
-								</div>
-							</div>							
-							
-							<div class="div">
-								<h5>CONTEXT</h5>
-								<h2>Our leadership decided to migrate one product into core product. But how?</h2>
-								<div class="flex">
-                                    <div>
-										<p>
-											The migrated product currently generates over $3 million in annual recurring revenue. While it shares the same ecosystem as the core product, its offerings are distinctly different.
-										</p>
-                                    </div>
-									
-								</div>
-							</div>
-						</div>
-
-						
-					
-					<!-- process -->
-					<section class="wrapper" style="background-color: #fdfdfd;">
-						
-						<div class="inner">
-							<div class="flex">
-								<div>
-									<h5>CHALLENGE</h5>
-									<h2>What features to migrate, and in what ways?</h2>
-									<p>I led the design exercises and discussion with cross-fuctional team to
-										shift the approach from product/engineering-oriented to design-led.
-									</p>
-                                </div>
-							</div>
-							<div class="flex">
-								<div>
-									<h5>PROCESS #1</h5>
-									<h3>Identify "Who"</h3>
-										<ul>
-											<li>
-												Leveraged previous documents and client job posting to identify user persona.
-											</li>
-											<li>
-												Conducted interviews with internal product experts to create user journey map.
-											</li>
-										</ul>
-									</p>
-                                </div>
-                                <div>
-									<img src="assets/images/forecast/user-type.png" style="width: 100%;">
-								</div>
-							</div>
-							<div class="flex">
-								<div>
-									<h5>PROCESS #2</h5>
-									<h3>Identify "What"</h3>
-										<p>Evaluated features to determine the high-level direction.</p>
-									</p>
-                                </div>
-                                <div>
-									<img src="assets/images/forecast/evaluation.png" style="width: 100%;">
-								</div>
-							</div>
-							<div class="flex">
-								<div>
-									<h5>PROCESS #3</h5>
-									<h3>Explore "Where"</h3>
-										<p>Ideated design solutions for forecasting feature based on user insights.</p>
-									</p>
-                                </div>
-                                <div>
-									<img src="assets/images/forecast/exploration.png" style="width: 100%;">
-								</div>
-							</div>
-							<div class="flex">
-								<div>
-									<h5>DECISION MAKING</h5>
-									<h3>Determine to go forward with 'Forecast inventory'</h3>
-										<p>
-											Reviewed design proposals with product managers and engineers to decide how to integrate forecasting features into the product.
-										</p>
-                                </div>
-                                <div>
-									<br/>
-									<img src="assets/images/forecast/decision.png" style="width: 100%;">
-								</div>
-							</div>
-						</div>
-
-					</section>
-
-					<!-- design -->
-					<section class="wrapper">
-						<div class="inner">
-							<h2>From vision to solution</h2>
-							<h5>REIMAGINE EXPERIENCE</h5>
-							<div class="flex">
-								<div>
-									<p>
-										Rather than retaining the previous manual experience, I proposed an interactive playground that empowers both novice and advanced users.
-									</p>
-								</div>
-								<div>
-									<img src="assets/images/forecast/reimagine.png" style="width: 100%;">
-								</div>
-							</div>
-
-							<h5>ITERATIONS</h5>
-							<div class="flex">
-								<div>
-									<p>
-										I explored different design variations to find a way to make a multi-step workflow intuitive.
-									</p>
-									<img src="assets/images/forecast/iteration.png" style="width: 100%;">
-
-								</div>
-							</div>
-
-							<h5>FINAL DESIGN</h5>
-							<h3>Extending the vision</h3>
-							<div class="flex">
-								<div>
-									<p><b>#1 Create forecast</b><br/>
-										A visual dashboard that allows users to explore forecasts, make selections, and instantly view results.
-									</p>
-								</div>
-								<div>
-									<img src="assets/images/forecast/final-1.png" style="width: 100%;">
-								</div>
-							</div>
-							<div class="flex">
-								<div>
-									<p><b>#2 Save and review</b><br/>
-										A saved forecasts list where users can review and take additional actions later.
-									</p>
-								</div>
-								<div>
-									<img src="assets/images/forecast/final-2.png" style="width: 100%;">
-								</div>
-							</div>
-							<div class="flex">
-								<div>
-									<p><b>#3 Additional actions</b><br/>
-										Users can update the forecast, duplicate it to create a new one, save it to a campaign, or delete it.
-									</p>
-								</div>
-								<div>
-									<img src="assets/images/forecast/final-3.png" style="width: 100%;">
-								</div>
-							</div>
-						</div>
-					</section>
-
-					<!-- final thoughts -->
-					<section class="wrapper" style="background-color: #fdfdfd;">
-						
-						<div class="inner">
-							<h5>IMPLEMENTATION</h5>
-							<div class="flex">
-								<div>
-									<h3>Communication</h3>
-									<p>
-										Ensure alignment across the cross-functional team by creating documentation, scheduling weekly design syncs, and establishing a space for asynchronous Q&A and updates.
-									</p>
-								</div>
-								<div>
-									<h3>Phasing</h3>
-									<p>
-										Worked with product and engineering teams to break down the solution into a phased plan.
-									</p>
-								</div>
-							</div>
-							<br/><br/>
-							<h5>IMPACT</h5>
-							<div class="flex">
-								<div>
-									<h3>Shift the dynamic to strengthen design influence</h3>
-									<p>The collaboration between the design, product, and engineering teams has become more design-driven.
-                                </div>
-								<div>
-									<h3>Revamp migrated features for $3M+ client retention</h3>
-									<p>Ensure seamless access to key capabilities for clients generating over $3M while reimagining the experience to support a broader range of client needs.</p>
-								</div>
-							</div>
-						</div>
-					</section>
-					
-			</div>
-
-		<!-- Footer -->
-			<footer id="footer" class="wrapper alt">
-				<div class="inner">
-					<ul class="menu">
-						<li>&copy; 2020 made with ☕ by Claire Chang</li>
-					</ul>
-				</div>
-			</footer>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+    <!-- Footer -->
+    <footer id="footer" class="wrapper alt">
+        <div class="inner">
+                <span>&copy; 2025 made with ☕ by Claire Chang</span>
+        </div>
+    </footer>
+</body>
 </html>
+
