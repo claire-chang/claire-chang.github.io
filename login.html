@@ -2,75 +2,55 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Protected Site Login</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-        html, body, div, span, applet, object,
-        iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
-        pre, a, abbr, acronym, address, big, cite,
-        code, del, dfn, em, img, ins, kbd, q, s, samp,
-        small, strike, strong, sub, sup, tt, var, b,
-        u, i, center, dl, dt, dd, ol, ul, li, fieldset,
-        form, label, legend, table, caption, tbody,
-        tfoot, thead, tr, th, td, article, aside,
-        canvas, details, embed, figure, figcaption,
-        footer, header, hgroup, menu, nav, output, ruby,
-        section, summary, time, mark, audio, video {
-            margin: 0;
-            padding: 0;
-            border: 0;
-            font-size: 100%;
-            font-family: "Work Sans", sans-serif;
-            font-optical-sizing: auto;
-            font-style: normal;
-            vertical-align: baseline;}
+    @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap');
+
     body {
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
+      font-family: "Work Sans", sans-serif;
+      background-color: #f5f5f5;
     }
-    h1, h2, h3 {
-      font-weight: 400;
-      margin-bottom: 20px;
-    }
-    h1 { font-size: 2.5rem; }
-    h5 {
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #667eea;
-    }
-    h3 { font-size: 1.4rem; }
+
     #login-box {
-      background: white;
-      padding: 40px;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-      text-align: center;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      padding: 2rem; /* Default padding */
+      width: 100%;
     }
-    input { 
-        margin: 10px 0; 
-        padding: 8px; 
-        width: 200px; 
-        border-radius: 8px;
-        border: #333 0.5px solid;
+
+    h3 {
+      font-weight: 600;
+      color: #111;
+      margin-bottom: 1rem;
     }
+
+    p {
+      color: #333;
+      margin-bottom: 1.25rem;
+      font-size: 1rem;
+    }
+
     .hover-button {
-        border: #333 0.5px solid;
-        padding: 4px 12px 4px 12px;
-        border-radius: 8px;
-        background: #fff;
-        color: #333;
-        /* opacity: 0.3; */
-        text-decoration: none;
-        height: 32px;
+      border: 1px solid #333;
+      border-radius: 8px;
+      background: #333;
+      color: #fff;
+      padding: 0.75rem;
+      font-size: 1rem;
+      transition: all 0.2s ease;
     }
 
     .hover-button:hover {
-        border: 0;
-        background: #333;
-        color: #fff;
+      background: #111;
     }
+    /* @media (max-width: 576px) {
+      .login-title {
+        font-size: 48px !important;
+      }
+    } */
   </style>
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -86,16 +66,14 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MBPTS9J"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-  <div class="container">
-    <div class="row justify-content-center align-items-center" style="min-height: 100vh;">
-      <div class="col-12 col-sm-12 col-md-6 col-lg-4">
-        <div id="login-box">
-          <h3>Claire Chang's Portfolio</h3>
-          <p style="margin-bottom: 16px; color: #333;">Peek behind the curtain to see my design work.</p>
-          <input type="password" id="inputSecret" placeholder="Password" class="form-control mb-3">
-          <button class="hover-button w-100 mb-2" onclick="validateAccess()">Submit</button>
-          <p id="error" style="color:#4e0202; margin-top: 8px;"></p>
-        </div>
+  <div class="container min-vh-100 d-flex justify-content-center align-items-center">
+    <div class="col-12 col-lg-6">
+      <div id="login-box" class="p-4 p-md-5 text-center">
+        <h3 class="fs-3">Claire Chang's Portfolio</h3>
+        <p class="fs-6">Peek behind the curtain to see my design work.</p>
+        <input type="password" id="inputSecret" placeholder="Password" class="form-control mb-3 py-3 fs-6 fs-md-5">
+        <button class="hover-button w-100 mb-2 fs-6 fs-md-5" onclick="validateAccess()">Submit</button>
+        <p id="error" class="text-danger mt-2"></p>
       </div>
     </div>
   </div>
